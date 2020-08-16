@@ -174,7 +174,7 @@ class BookFormat(db.Model):
     __tablename__ = 'books_format'
 
     id = db.Column(db.Integer, primary_key=True)
-    book_id = db.Column(db.String())
+    book_id = db.Column(db.String(), db.ForeignKey('books_book.id'))
     mime_type = db.Column(db.String())
     url = db.Column(db.String())
 
