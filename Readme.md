@@ -25,3 +25,6 @@ Accepted query params includes
 - topic
 - author
 - title
+
+Deployed on EC2 instance using Supervisor
+- Search API = http://15.207.87.22:5000/search?gutenberg_id=3
