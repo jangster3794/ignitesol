@@ -6,6 +6,7 @@ db = SQLAlchemy()
 def init_db(app):
     SQLAlchemy(app)
 
+# Table Models with a custom to_json method to get jsonify data
 class Books(db.Model):
     __tablename__ = 'books_book'
 
@@ -22,7 +23,7 @@ class Books(db.Model):
         self.gutenberg_id = gutenberg_id
         self.media_type = media_type
         self.title = title
-        
+
     def to_json(self):
         return {
             'id': self.id,
